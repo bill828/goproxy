@@ -5,10 +5,10 @@ import (
 	"crypto/tls"
 	"encoding/binary"
 	"fmt"
+	"goproxy/utils"
 	"io"
 	"log"
 	"net"
-	"proxy/utils"
 	"time"
 )
 

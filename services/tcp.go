@@ -2,10 +2,10 @@ package services
 
 import (
 	"fmt"
+	"goproxy/utils"
 	"io"
 	"log"
 	"net"
-	"proxy/utils"
 	"runtime/debug"
 	"time"
 

@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"goproxy/services"
 	"log"
 	"os"
 	"os/signal"
-	"proxy/services"
 	"syscall"
 )
 
