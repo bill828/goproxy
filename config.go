@@ -35,7 +35,7 @@ func initConfig() (err error) {
 
 	//build srvice args
 	app = kingpin.New("proxy", "happy with proxy")
-	app.Author("snail").Version(APP_VERSION)
+	app.Author("snail").Version(appVersion)
 	args.Parent = app.Flag("parent", "parent address, such as: \"23.32.32.19:28008\"").Default("").Short('P').String()
 	args.Local = app.Flag("local", "local ip:port to listen").Short('p').Default(":33080").String()
 	certTLS := app.Flag("cert", "cert file for tls").Short('C').Default("proxy.crt").String()
@@ -127,7 +127,7 @@ func poster() {
 		##        ##    ##  ##     ##  ##   ##     ##    
 		##        ##     ##  #######  ##     ##    ##    
 		
-		v%s`+" by snail , blog : http://www.host900.com/\n\n", APP_VERSION)
+		v%s`+" by snail , blog : http://www.host900.com/\n\n", appVersion)
 }
 func tlsBytes(cert, key string) (certBytes, keyBytes []byte) {
 	certBytes, err := ioutil.ReadFile(cert)
